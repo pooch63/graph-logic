@@ -1,0 +1,44 @@
+/* head */
+
+h2 {
+    border-bottom: 2px solid whitesmoke;
+}
+
+/* h3 {
+    margin-left: 5px;
+} */
+
+/* table */
+
+th {
+    text-align: left;
+}
+
+table td:first-child {
+    font-weight: bold;
+}
+
+table {
+    width: 99%;
+    font-size: 10.5pt !important;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.sidebar-brand-text {
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+body[data-theme="light"] {
+    --sd-color-shadow: none;
+    --sd-color-card-background: #f8f9fb
+  }
+
+
+body[data-theme="dark"] {
+    --sd-color-card-background: #202020
+}
+

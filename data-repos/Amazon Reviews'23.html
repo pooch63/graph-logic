@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://amazon-reviews-2023.github.io/ -->
+<html class="show-back-to-top" lang="en" data-content_root=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/">
+<link rel="index" title="Index" href="https://amazon-reviews-2023.github.io/genindex.html"><link rel="search" title="Search" href="https://amazon-reviews-2023.github.io/search.html"><link rel="next" title="Common Data Processing" href="https://amazon-reviews-2023.github.io/data_processing/index.html">
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+        <title>Amazon Reviews'23</title>
+      <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/pygments.css">
+    <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/furo.css">
+    <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css">
+    <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css">
+    <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/furo-extensions.css">
+    <link rel="stylesheet" type="text/css" href="./Amazon Reviews'23_files/custom.css">
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body data-theme="auto">
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"></path>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M13 12h5"></path>
+      <path d="M13 15h4"></path>
+      <path d="M13 18h1"></path>
+      <path d="M13 9h4"></path>
+      <path d="M13 6h1"></path>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header scrolled">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="https://amazon-reviews-2023.github.io/#"><div class="brand">Amazon Reviews'23</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="https://amazon-reviews-2023.github.io/#">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="./Amazon Reviews'23_files/ucsd_logo.png" alt="Light Logo">
+    <img class="sidebar-logo only-dark" src="./Amazon Reviews'23_files/ucsd_logo.png" alt="Dark Logo">
+  </div>
+  
+  <span class="sidebar-brand-text">Amazon Reviews'23</span>
+  
+</a><form class="sidebar-search-container" method="get" action="https://amazon-reviews-2023.github.io/search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_processing/index.html">Common Data Processing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Common Data Processing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_processing/0core.html">Pure IDs (0-Core)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_processing/5core.html">Pure IDs (5-Core)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_loading/index.html">Common Data Loading</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Common Data Loading</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_loading/jsonl.html">Via Native <code class="docutils literal notranslate"><span class="pre">json</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_loading/huggingface.html">Via Huggingface <code class="docutils literal notranslate"><span class="pre">datasets</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://amazon-reviews-2023.github.io/main.html">Back to Home</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="https://amazon-reviews-2023.github.io/#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="introduction">
+<h1>Introduction<a class="headerlink" href="https://amazon-reviews-2023.github.io/#introduction" title="Permalink to this heading">#</a></h1>
+<p>[<a class="reference external" href="https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023">🤗 Huggingface Datasets</a>] · [<a class="reference external" href="https://arxiv.org/abs/2403.03952">📑 Paper</a>] · [<a class="reference external" href="https://github.com/hyp1231/AmazonReviews2023">💻 GitHub</a>]</p>
+<p>This is a large-scale <strong>Amazon Reviews</strong> dataset, collected in <strong>2023</strong> by <a class="reference external" href="https://cseweb.ucsd.edu/~jmcauley/">McAuley Lab</a>, and it includes rich features such as:</p>
+<ol class="arabic simple">
+<li><p><strong>User Reviews</strong> (<em>ratings</em>, <em>text</em>, <em>helpfulness votes</em>, etc.);</p></li>
+<li><p><strong>Item Metadata</strong> (<em>descriptions</em>, <em>price</em>, <em>raw image</em>, etc.);</p></li>
+<li><p><strong>Links</strong> (<em>user-item</em> / <em>bought together</em> graphs).</p></li>
+</ol>
+<section id="what-s-new" class="">
+<h2>What’s New?<a class="headerlink" href="https://amazon-reviews-2023.github.io/#what-s-new" title="Permalink to this heading">#</a></h2>
+<p>In the Amazon Reviews’23, we provide:</p>
+<ol class="arabic simple">
+<li><p><strong>Larger Dataset:</strong> We collected 571.54M reviews, 245.2% larger than the last version;</p></li>
+<li><p><strong>Newer Interactions:</strong> Current interactions range from May. 1996 to Sep. 2023;</p></li>
+<li><p><strong>Richer Metadata:</strong> More descriptive features in item metadata;</p></li>
+<li><p><strong>Fine-grained Timestamp:</strong> Interaction timestamp at the second or finer level;</p></li>
+<li><p><strong>Cleaner Processing:</strong> Cleaner item metadata than previous versions;</p></li>
+<li><p><strong>Standard Splitting:</strong> Standard data splits to encourage RecSys benchmarking.</p></li>
+</ol>
+</section>
+<section id="citation" class="">
+<h2>Citation<a class="headerlink" href="https://amazon-reviews-2023.github.io/#citation" title="Permalink to this heading">#</a></h2>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span>@article<span class="nb">{</span>hou2024bridging,
+  title=<span class="nb">{</span>Bridging Language and Items for Retrieval and Recommendation<span class="nb">}</span>,
+  author=<span class="nb">{</span>Hou, Yupeng and Li, Jiacheng and He, Zhankui and Yan, An and Chen, Xiusi and McAuley, Julian<span class="nb">}</span>,
+  journal=<span class="nb">{</span>arXiv preprint arXiv:2403.03952<span class="nb">}</span>,
+  year=<span class="nb">{</span>2024<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</section>
+<section id="basic-statistics" class="">
+<h2>Basic Statistics<a class="headerlink" href="https://amazon-reviews-2023.github.io/#basic-statistics" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We define the <b>#R_Tokens</b> as the number of <a class="reference external" href="https://pypi.org/project/tiktoken/">tokens</a> in user reviews and <b>#M_Tokens</b> as the number of <a class="reference external" href="https://pypi.org/project/tiktoken/">tokens</a> if treating the dictionaries of item attributes as strings. We emphasize them as important statistics in the era of LLMs.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We count the number of items based on user reviews rather than item metadata files. Note that some items lack metadata.</p>
+</div>
+<section id="compared-to-previous-versions" class="">
+<h3>Compared to Previous Versions<a class="headerlink" href="https://amazon-reviews-2023.github.io/#compared-to-previous-versions" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Year</p></th>
+<th class="head text-right"><p>#Review</p></th>
+<th class="head text-right"><p>#User</p></th>
+<th class="head text-right"><p>#Item</p></th>
+<th class="head text-right"><p>#R_Token</p></th>
+<th class="head text-right"><p>#M_Token</p></th>
+<th class="head text-right"><p>#Domain</p></th>
+<th class="head text-right"><p>Timespan</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://snap.stanford.edu/data/web-Amazon-links.html">2013</a></p></td>
+<td class="text-right"><p>34.69M</p></td>
+<td class="text-right"><p>6.64M</p></td>
+<td class="text-right"><p>2.44M</p></td>
+<td class="text-right"><p>5.91B</p></td>
+<td class="text-right"><p>–</p></td>
+<td class="text-right"><p>28</p></td>
+<td class="text-right"><p>Jun’96 - Mar’13</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/links.html">2014</a></p></td>
+<td class="text-right"><p>82.83M</p></td>
+<td class="text-right"><p>21.13M</p></td>
+<td class="text-right"><p>9.86M</p></td>
+<td class="text-right"><p>9.16B</p></td>
+<td class="text-right"><p>4.14B</p></td>
+<td class="text-right"><p>24</p></td>
+<td class="text-right"><p>May’96 - Jul’14</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/">2018</a></p></td>
+<td class="text-right"><p>233.10M</p></td>
+<td class="text-right"><p>43.53M</p></td>
+<td class="text-right"><p>15.17M</p></td>
+<td class="text-right"><p>15.73B</p></td>
+<td class="text-right"><p>7.99B</p></td>
+<td class="text-right"><p>29</p></td>
+<td class="text-right"><p>May’96 - Oct’18</p></td>
+</tr>
+<tr class="row-odd"><td><p><b><a class="reference external" href="https:">2023</a></b></p></td>
+<td class="text-right"><p><strong>571.54M</strong></p></td>
+<td class="text-right"><p><strong>54.51M</strong></p></td>
+<td class="text-right"><p><strong>48.19M</strong></p></td>
+<td class="text-right"><p><strong>30.14B</strong></p></td>
+<td class="text-right"><p><strong>30.78B</strong></p></td>
+<td class="text-right"><p><strong>33</strong></p></td>
+<td class="text-right"><p><strong>May’96 - Sep’23</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="grouped-by-category" class="active">
+<h3>Grouped by Category<a class="headerlink" href="https://amazon-reviews-2023.github.io/#grouped-by-category" title="Permalink to this heading">#</a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Check Pure ID files (”<strong>ratings only</strong>” files) and corresponding data splitting strategies in <b><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_processing/index.html"><span class="doc std std-doc">Common Data Processing</span></a></b> section.</p>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Category</p></th>
+<th class="head text-right"><p>#User</p></th>
+<th class="head text-right"><p>#Item</p></th>
+<th class="head text-right"><p>#Rating</p></th>
+<th class="head text-right"><p>#R_Token</p></th>
+<th class="head text-right"><p>#M_Token</p></th>
+<th class="head text-right"><p>Download</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>All_Beauty</p></td>
+<td class="text-right"><p>632.0K</p></td>
+<td class="text-right"><p>112.6K</p></td>
+<td class="text-right"><p>701.5K</p></td>
+<td class="text-right"><p>31.6M</p></td>
+<td class="text-right"><p>74.1M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/All_Beauty.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_All_Beauty.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Amazon_Fashion</p></td>
+<td class="text-right"><p>2.0M</p></td>
+<td class="text-right"><p>825.9K</p></td>
+<td class="text-right"><p>2.5M</p></td>
+<td class="text-right"><p>94.9M</p></td>
+<td class="text-right"><p>510.5M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Amazon_Fashion.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Amazon_Fashion.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Appliances</p></td>
+<td class="text-right"><p>1.8M</p></td>
+<td class="text-right"><p>94.3K</p></td>
+<td class="text-right"><p>2.1M</p></td>
+<td class="text-right"><p>92.8M</p></td>
+<td class="text-right"><p>95.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Appliances.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Appliances.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Arts_Crafts_and_Sewing</p></td>
+<td class="text-right"><p>4.6M</p></td>
+<td class="text-right"><p>801.3K</p></td>
+<td class="text-right"><p>9.0M</p></td>
+<td class="text-right"><p>350.0M</p></td>
+<td class="text-right"><p>695.4M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Arts_Crafts_and_Sewing.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Arts_Crafts_and_Sewing.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Automotive</p></td>
+<td class="text-right"><p>8.0M</p></td>
+<td class="text-right"><p>2.0M</p></td>
+<td class="text-right"><p>20.0M</p></td>
+<td class="text-right"><p>824.9M</p></td>
+<td class="text-right"><p>1.7B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Automotive.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Automotive.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Baby_Products</p></td>
+<td class="text-right"><p>3.4M</p></td>
+<td class="text-right"><p>217.7K</p></td>
+<td class="text-right"><p>6.0M</p></td>
+<td class="text-right"><p>323.3M</p></td>
+<td class="text-right"><p>218.6M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Baby_Products.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Baby_Products.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Beauty_and_Personal_Care</p></td>
+<td class="text-right"><p>11.3M</p></td>
+<td class="text-right"><p>1.0M</p></td>
+<td class="text-right"><p>23.9M</p></td>
+<td class="text-right"><p>1.1B</p></td>
+<td class="text-right"><p>913.7M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Beauty_and_Personal_Care.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Beauty_and_Personal_Care.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Books</p></td>
+<td class="text-right"><p>10.3M</p></td>
+<td class="text-right"><p>4.4M</p></td>
+<td class="text-right"><p>29.5M</p></td>
+<td class="text-right"><p>2.9B</p></td>
+<td class="text-right"><p>3.7B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Books.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Books.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>CDs_and_Vinyl</p></td>
+<td class="text-right"><p>1.8M</p></td>
+<td class="text-right"><p>701.7K</p></td>
+<td class="text-right"><p>4.8M</p></td>
+<td class="text-right"><p>514.8M</p></td>
+<td class="text-right"><p>287.5M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/CDs_and_Vinyl.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_CDs_and_Vinyl.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell_Phones_and_Accessories</p></td>
+<td class="text-right"><p>11.6M</p></td>
+<td class="text-right"><p>1.3M</p></td>
+<td class="text-right"><p>20.8M</p></td>
+<td class="text-right"><p>935.4M</p></td>
+<td class="text-right"><p>1.3B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Cell_Phones_and_Accessories.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Cell_Phones_and_Accessories.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Clothing_Shoes_and_Jewelry</p></td>
+<td class="text-right"><p>22.6M</p></td>
+<td class="text-right"><p>7.2M</p></td>
+<td class="text-right"><p>66.0M</p></td>
+<td class="text-right"><p>2.6B</p></td>
+<td class="text-right"><p>5.9B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Clothing_Shoes_and_Jewelry.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Clothing_Shoes_and_Jewelry.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Digital_Music</p></td>
+<td class="text-right"><p>101.0K</p></td>
+<td class="text-right"><p>70.5K</p></td>
+<td class="text-right"><p>130.4K</p></td>
+<td class="text-right"><p>11.4M</p></td>
+<td class="text-right"><p>22.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Digital_Music.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Digital_Music.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Electronics</p></td>
+<td class="text-right"><p>18.3M</p></td>
+<td class="text-right"><p>1.6M</p></td>
+<td class="text-right"><p>43.9M</p></td>
+<td class="text-right"><p>2.7B</p></td>
+<td class="text-right"><p>1.7B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Electronics.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Electronics.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Gift_Cards</p></td>
+<td class="text-right"><p>132.7K</p></td>
+<td class="text-right"><p>1.1K</p></td>
+<td class="text-right"><p>152.4K</p></td>
+<td class="text-right"><p>3.6M</p></td>
+<td class="text-right"><p>630.0K</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Gift_Cards.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Gift_Cards.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Grocery_and_Gourmet_Food</p></td>
+<td class="text-right"><p>7.0M</p></td>
+<td class="text-right"><p>603.2K</p></td>
+<td class="text-right"><p>14.3M</p></td>
+<td class="text-right"><p>579.5M</p></td>
+<td class="text-right"><p>462.8M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Grocery_and_Gourmet_Food.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Grocery_and_Gourmet_Food.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Handmade_Products</p></td>
+<td class="text-right"><p>586.6K</p></td>
+<td class="text-right"><p>164.7K</p></td>
+<td class="text-right"><p>664.2K</p></td>
+<td class="text-right"><p>23.3M</p></td>
+<td class="text-right"><p>125.8M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Handmade_Products.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Handmade_Products.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Health_and_Household</p></td>
+<td class="text-right"><p>12.5M</p></td>
+<td class="text-right"><p>797.4K</p></td>
+<td class="text-right"><p>25.6M</p></td>
+<td class="text-right"><p>1.2B</p></td>
+<td class="text-right"><p>787.2M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Health_and_Household.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Health_and_Household.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Health_and_Personal_Care</p></td>
+<td class="text-right"><p>461.7K</p></td>
+<td class="text-right"><p>60.3K</p></td>
+<td class="text-right"><p>494.1K</p></td>
+<td class="text-right"><p>23.9M</p></td>
+<td class="text-right"><p>40.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Health_and_Personal_Care.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Health_and_Personal_Care.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Home_and_Kitchen</p></td>
+<td class="text-right"><p>23.2M</p></td>
+<td class="text-right"><p>3.7M</p></td>
+<td class="text-right"><p>67.4M</p></td>
+<td class="text-right"><p>3.1B</p></td>
+<td class="text-right"><p>3.8B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Home_and_Kitchen.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Home_and_Kitchen.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Industrial_and_Scientific</p></td>
+<td class="text-right"><p>3.4M</p></td>
+<td class="text-right"><p>427.5K</p></td>
+<td class="text-right"><p>5.2M</p></td>
+<td class="text-right"><p>235.2M</p></td>
+<td class="text-right"><p>363.1M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Industrial_and_Scientific.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Industrial_and_Scientific.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Kindle_Store</p></td>
+<td class="text-right"><p>5.6M</p></td>
+<td class="text-right"><p>1.6M</p></td>
+<td class="text-right"><p>25.6M</p></td>
+<td class="text-right"><p>2.2B</p></td>
+<td class="text-right"><p>1.7B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Kindle_Store.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Kindle_Store.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Magazine_Subscriptions</p></td>
+<td class="text-right"><p>60.1K</p></td>
+<td class="text-right"><p>3.4K</p></td>
+<td class="text-right"><p>71.5K</p></td>
+<td class="text-right"><p>3.8M</p></td>
+<td class="text-right"><p>1.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Magazine_Subscriptions.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Magazine_Subscriptions.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Movies_and_TV</p></td>
+<td class="text-right"><p>6.5M</p></td>
+<td class="text-right"><p>747.8K</p></td>
+<td class="text-right"><p>17.3M</p></td>
+<td class="text-right"><p>1.0B</p></td>
+<td class="text-right"><p>415.5M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Movies_and_TV.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Movies_and_TV.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Musical_Instruments</p></td>
+<td class="text-right"><p>1.8M</p></td>
+<td class="text-right"><p>213.6K</p></td>
+<td class="text-right"><p>3.0M</p></td>
+<td class="text-right"><p>182.2M</p></td>
+<td class="text-right"><p>200.1M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Musical_Instruments.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Musical_Instruments.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Office_Products</p></td>
+<td class="text-right"><p>7.6M</p></td>
+<td class="text-right"><p>710.4K</p></td>
+<td class="text-right"><p>12.8M</p></td>
+<td class="text-right"><p>574.7M</p></td>
+<td class="text-right"><p>682.8M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Office_Products.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Office_Products.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Patio_Lawn_and_Garden</p></td>
+<td class="text-right"><p>8.6M</p></td>
+<td class="text-right"><p>851.7K</p></td>
+<td class="text-right"><p>16.5M</p></td>
+<td class="text-right"><p>781.3M</p></td>
+<td class="text-right"><p>875.1M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Patio_Lawn_and_Garden.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Patio_Lawn_and_Garden.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Pet_Supplies</p></td>
+<td class="text-right"><p>7.8M</p></td>
+<td class="text-right"><p>492.7K</p></td>
+<td class="text-right"><p>16.8M</p></td>
+<td class="text-right"><p>905.9M</p></td>
+<td class="text-right"><p>511.0M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Pet_Supplies.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Pet_Supplies.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Software</p></td>
+<td class="text-right"><p>2.6M</p></td>
+<td class="text-right"><p>89.2K</p></td>
+<td class="text-right"><p>4.9M</p></td>
+<td class="text-right"><p>179.4M</p></td>
+<td class="text-right"><p>67.1M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Software.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Software.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Sports_and_Outdoors</p></td>
+<td class="text-right"><p>10.3M</p></td>
+<td class="text-right"><p>1.6M</p></td>
+<td class="text-right"><p>19.6M</p></td>
+<td class="text-right"><p>986.2M</p></td>
+<td class="text-right"><p>1.3B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Sports_and_Outdoors.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Sports_and_Outdoors.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Subscription_Boxes</p></td>
+<td class="text-right"><p>15.2K</p></td>
+<td class="text-right"><p>641</p></td>
+<td class="text-right"><p>16.2K</p></td>
+<td class="text-right"><p>1.0M</p></td>
+<td class="text-right"><p>447.0K</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Subscription_Boxes.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Subscription_Boxes.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Tools_and_Home_Improvement</p></td>
+<td class="text-right"><p>12.2M</p></td>
+<td class="text-right"><p>1.5M</p></td>
+<td class="text-right"><p>27.0M</p></td>
+<td class="text-right"><p>1.3B</p></td>
+<td class="text-right"><p>1.5B</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Tools_and_Home_Improvement.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Tools_and_Home_Improvement.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Toys_and_Games</p></td>
+<td class="text-right"><p>8.1M</p></td>
+<td class="text-right"><p>890.7K</p></td>
+<td class="text-right"><p>16.3M</p></td>
+<td class="text-right"><p>707.9M</p></td>
+<td class="text-right"><p>848.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Toys_and_Games.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Toys_and_Games.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-even"><td><p>Video_Games</p></td>
+<td class="text-right"><p>2.8M</p></td>
+<td class="text-right"><p>137.2K</p></td>
+<td class="text-right"><p>4.6M</p></td>
+<td class="text-right"><p>347.9M</p></td>
+<td class="text-right"><p>137.3M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Video_Games.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Video_Games.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Unknown</p></td>
+<td class="text-right"><p>23.1M</p></td>
+<td class="text-right"><p>13.2M</p></td>
+<td class="text-right"><p>63.8M</p></td>
+<td class="text-right"><p>3.3B</p></td>
+<td class="text-right"><p>232.8M</p></td>
+<td class="text-right"><p><a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Unknown.jsonl.gz" download=""> review</a>, <a href="https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Unknown.jsonl.gz" download=""> meta </a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="https://amazon-reviews-2023.github.io/#quick-start" title="Permalink to this heading">#</a></h2>
+<section id="load-user-reviews" class="">
+<h3>Load User Reviews<a class="headerlink" href="https://amazon-reviews-2023.github.io/#load-user-reviews" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="c1"># e.g., "All_Beauty.jsonl", downloaded from the `review` link above</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>......
+{
+  "sort_timestamp": 1634275259292,
+  "rating": 3.0,
+  "helpful_votes": 0,
+  "title": "Meh",
+  "text": "These were lightweight and soft but much too small for my liking. I would have preferred two of these together to make one loc. For that reason I will not be repurchasing.",
+  "images": [
+    {
+      "small_image_url": "https://m.media-amazon.com/images/I/81FN4c0VHzL._SL256_.jpg",
+      "medium_image_url": "https://m.media-amazon.com/images/I/81FN4c0VHzL._SL800_.jpg",
+      "large_image_url": "https://m.media-amazon.com/images/I/81FN4c0VHzL._SL1600_.jpg",
+      "attachment_type": "IMAGE"
+    }
+  ],
+  "asin": "B088SZDGXG",
+  "verified_purchase": true,
+  "parent_asin": "B08BBQ29N5",
+  "user_id": "AEYORY2AVPMCPDV57CE337YU5LXA"
+}
+......
+</pre></div>
+</div>
+</section>
+<section id="load-item-metadata" class="">
+<h3>Load Item Metadata<a class="headerlink" href="https://amazon-reviews-2023.github.io/#load-item-metadata" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="c1"># e.g., "meta_All_Beauty.jsonl", downloaded from the `meta` link above</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()))</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>......
+{
+  "main_category": "All Beauty",
+  "title": "Lurrose 100Pcs Full Cover Fake Toenails Artificial Transparent Nail Tips Nail Art for DIY",
+  "average_rating": 3.7,
+  "rating_number": 35,
+  "features": [
+    "The false toenails are durable with perfect length. You have the option to wear them long or clip them short, easy to trim and file them to in any length and shape you like.",
+    "ABS is kind of green enviromental material, and makes the nails durable, breathable, light even no pressure on your own nails.",
+    "Fit well to your natural toenails. Non toxic, no smell, no harm to your health.",
+    "Wonderful as gift for girlfriend, family and friends.",
+    "The easiest and most efficient way to do your toenail tips for manicures or nail art designs. It's fashion, creative, a useful accessory brighten up your look, also as a gift."
+  ],
+  "description": [
+    "Description",
+    "The false toenails are durable with perfect length. You have the option to wear them long or clip them short, easy to trim and file them to in any length and shape you like. Plus, ABS is kind of green enviromental material, and makes the nails durable, breathable, light even no pressure on your own toenails. Fit well to your natural toenails. Non toxic, no smell, no harm to your health.",
+    "Feature",
+    "- Color: As Shown.- Material: ABS.- Size: 14.3 x 7.2 x 1cm.",
+    "Package Including",
+    "100 x Pieces fake toenails"
+  ],
+  "price": 6.99,
+  "images": [
+    {
+      "hi_res": "https://m.media-amazon.com/images/I/41a1Sj7Q20L._SL1005_.jpg",
+      "thumb": "https://m.media-amazon.com/images/I/31dlCd7tHSL._SS40_.jpg",
+      "large": "https://m.media-amazon.com/images/I/31dlCd7tHSL.jpg",
+      "variant": "MAIN"
+    },
+    {
+      "hi_res": "https://m.media-amazon.com/images/I/510BWq7O95L._SL1005_.jpg",
+      "thumb": "https://m.media-amazon.com/images/I/31sLajrdHOL._SS40_.jpg",
+      "large": "https://m.media-amazon.com/images/I/31sLajrdHOL.jpg",
+      "variant": "PT01"
+    },
+    ......
+  ],
+  "videos": [],
+  "bought_together": null,
+  "store": "Lurrose",
+  "categories": [],
+  "details": {
+    "Color": "As Shown",
+    "Size": "Large",
+    "Material": "Acrylonitrile Butadiene Styrene (ABS)",
+    "Brand": "Lurrose",
+    "Style": "French",
+    "Product Dimensions": "5.63 x 2.83 x 0.39 inches; 1.9 Ounces",
+    "UPC": "799768026253",
+    "Manufacturer": "Lurrose"
+  },
+  "parent_asin": "B07G9GWFSM"
+}
+......
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Check data loading examples and Huggingface datasets APIs in <b><a class="reference internal" href="https://amazon-reviews-2023.github.io/data_loading/index.html"><span class="doc std std-doc">Common Data Loading</span></a></b> section.</p>
+</div>
+</section>
+</section>
+<section id="data-fields">
+<h2>Data Fields<a class="headerlink" href="https://amazon-reviews-2023.github.io/#data-fields" title="Permalink to this heading">#</a></h2>
+<section id="for-user-reviews">
+<h3>For User Reviews<a class="headerlink" href="https://amazon-reviews-2023.github.io/#for-user-reviews" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>rating</p></td>
+<td><p>float</p></td>
+<td><p>Rating of the product (from 1.0 to 5.0).</p></td>
+</tr>
+<tr class="row-odd"><td><p>title</p></td>
+<td><p>str</p></td>
+<td><p>Title of the user review.</p></td>
+</tr>
+<tr class="row-even"><td><p>text</p></td>
+<td><p>str</p></td>
+<td><p>Text body of the user review.</p></td>
+</tr>
+<tr class="row-odd"><td><p>images</p></td>
+<td><p>list</p></td>
+<td><p>Images that users post after they have received the product. Each image has different sizes (small, medium, large), represented by the small_image_url, medium_image_url, and large_image_url respectively.</p></td>
+</tr>
+<tr class="row-even"><td><p>asin</p></td>
+<td><p>str</p></td>
+<td><p>ID of the product.</p></td>
+</tr>
+<tr class="row-odd"><td><p>parent_asin</p></td>
+<td><p>str</p></td>
+<td><p>Parent ID of the product. Note: Products with different colors, styles, sizes usually belong to the same parent ID. The “asin” in previous Amazon datasets is actually parent ID. <b>Please use parent ID to find product meta.</b></p></td>
+</tr>
+<tr class="row-even"><td><p>user_id</p></td>
+<td><p>str</p></td>
+<td><p>ID of the reviewer</p></td>
+</tr>
+<tr class="row-odd"><td><p>timestamp</p></td>
+<td><p>int</p></td>
+<td><p>Time of the review (unix time)</p></td>
+</tr>
+<tr class="row-even"><td><p>verified_purchase</p></td>
+<td><p>bool</p></td>
+<td><p>User purchase verification</p></td>
+</tr>
+<tr class="row-odd"><td><p>helpful_vote</p></td>
+<td><p>int</p></td>
+<td><p>Helpful votes of the review</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="for-item-metadata">
+<h3>For Item Metadata<a class="headerlink" href="https://amazon-reviews-2023.github.io/#for-item-metadata" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>main_category</p></td>
+<td><p>str</p></td>
+<td><p>Main category (i.e., domain) of the product.</p></td>
+</tr>
+<tr class="row-odd"><td><p>title</p></td>
+<td><p>str</p></td>
+<td><p>Name of the product.</p></td>
+</tr>
+<tr class="row-even"><td><p>average_rating</p></td>
+<td><p>float</p></td>
+<td><p>Rating of the product shown on the product page.</p></td>
+</tr>
+<tr class="row-odd"><td><p>rating_number</p></td>
+<td><p>int</p></td>
+<td><p>Number of ratings in the product.</p></td>
+</tr>
+<tr class="row-even"><td><p>features</p></td>
+<td><p>list</p></td>
+<td><p>Bullet-point format features of the product.</p></td>
+</tr>
+<tr class="row-odd"><td><p>description</p></td>
+<td><p>list</p></td>
+<td><p>Description of the product.</p></td>
+</tr>
+<tr class="row-even"><td><p>price</p></td>
+<td><p>float</p></td>
+<td><p>Price in US dollars (at time of crawling).</p></td>
+</tr>
+<tr class="row-odd"><td><p>images</p></td>
+<td><p>list</p></td>
+<td><p>Images of the product. Each image has different sizes (thumb, large, hi_res). The “variant” field shows the position of image.</p></td>
+</tr>
+<tr class="row-even"><td><p>videos</p></td>
+<td><p>list</p></td>
+<td><p>Videos of the product including title and url.</p></td>
+</tr>
+<tr class="row-odd"><td><p>store</p></td>
+<td><p>str</p></td>
+<td><p>Store name of the product.</p></td>
+</tr>
+<tr class="row-even"><td><p>categories</p></td>
+<td><p>list</p></td>
+<td><p>Hierarchical categories of the product.</p></td>
+</tr>
+<tr class="row-odd"><td><p>details</p></td>
+<td><p>dict</p></td>
+<td><p>Product details, including materials, brand, sizes, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>parent_asin</p></td>
+<td><p>str</p></td>
+<td><p>Parent ID of the product.</p></td>
+</tr>
+<tr class="row-odd"><td><p>bought_together</p></td>
+<td><p>list</p></td>
+<td><p>Recommended bundles from the websites.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="contact-us">
+<h2>Contact Us<a class="headerlink" href="https://amazon-reviews-2023.github.io/#contact-us" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Report Bugs</strong>: To report bugs in the dataset, please file an issue on our <a class="reference external" href="https://github.com/hyp1231/AmazonReviews2023/issues/new">GitHub</a>.</p></li>
+<li><p><strong>Others</strong>: For research collaborations or other questions, please email <strong>yphou AT ucsd.edu</strong>.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="https://amazon-reviews-2023.github.io/data_processing/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Common Data Processing</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright © 2024, McAuley Lab
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me/">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#">Introduction</a><ul>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#what-s-new">What’s New?</a></li>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#citation">Citation</a></li>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#basic-statistics">Basic Statistics</a><ul>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#compared-to-previous-versions">Compared to Previous Versions</a></li>
+<li class="scroll-current"><a class="reference internal" href="https://amazon-reviews-2023.github.io/#grouped-by-category">Grouped by Category</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#quick-start">Quick Start</a><ul>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#load-user-reviews">Load User Reviews</a></li>
+<li class=""><a class="reference internal" href="https://amazon-reviews-2023.github.io/#load-item-metadata">Load Item Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#data-fields">Data Fields</a><ul>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#for-user-reviews">For User Reviews</a></li>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#for-item-metadata">For Item Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://amazon-reviews-2023.github.io/#contact-us">Contact Us</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="./Amazon Reviews'23_files/documentation_options.js"></script>
+    <script src="./Amazon Reviews'23_files/doctools.js"></script>
+    <script src="./Amazon Reviews'23_files/sphinx_highlight.js"></script>
+    <script src="./Amazon Reviews'23_files/furo.js"></script>
+    <script src="./Amazon Reviews'23_files/design-tabs.js"></script>
+    
+</body></html>

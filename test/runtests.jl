@@ -86,6 +86,68 @@ end
     @test length(ind.v_adj) == 4
 end
 
+@testset "UnipartiteGraph" begin
+    # triangle 1–2–3 plus pendant 3–4 and a self-loop on 4
+    g = UnipartiteGraph()
+    add_edge!(g, 1, 2, 0.5)
+    add_edge!(g, 2, 3, 2.0)
+    add_edge!(g, 3, 1)
+    add_edge!(g, 3, 4, 1.5)
+    add_edge!(g, 4, 4, 3.0)
+    @test num_vertices(g) == 4
+    @test num_edges(g) == 5
+    @test has_edge(g, 2, 1) && edge_weight(g, 2, 1) == 0.5
+    @test edge_weight(g, 1, 3) == 1.0
+    @test degree(g, 4) == 2
+    @test weighted_degree(g, 3) == 4.5
+    @test total_weight(g) == 8.0
+
+    add_edge!(g, 1, 2, 0.25)          # overwrite, no new edge
+    @test num_edges(g) == 5 && edge_weight(g, 1, 2) == 0.25
+    add_weight!(g, 2, 1, 1.0)
+    @test edge_weight(g, 1, 2) == 1.25
+    add_weight!(g, 5, 6, 2.0)
+    @test num_edges(g) == 6
+    @test rem_edge!(g, 6, 5) && !has_edge(g, 5, 6) && num_edges(g) == 5
+    @test !rem_edge!(g, 1, 4)
+
+    fg = freeze(g)
+    @test num_vertices(fg) == 6 && num_edges(fg) == 5
+    @test neighbors(fg, 3) == [1, 2, 4]
+    @test neighbors(fg, 4) == [3, 4]
+    @test degree(fg, 5) == 0 && degree(fg, 99) == 0
+    @test weighted_degree(fg, 4) == 4.5
+    @test edge_weight(fg, 2, 1) == 1.25
+    @test edge_weight(fg, 1, 4; default=0.0) == 0.0
+    @test_throws KeyError edge_weight(fg, 1, 4)
+    @test has_edge(fg, 4, 4) && !has_edge(fg, 1, 99)
+    @test total_weight(fg) == total_weight(g)
+    @test induced_weight(fg, [1, 2, 3]) == 1.25 + 2.0 + 1.0
+    @test induced_weight(fg, [3, 4, 42]) == 4.5
+
+    @test rem_vertex!(g, 3)
+    @test num_edges(g) == 2 && !has_edge(g, 1, 3) && degree(g, 4) == 1
+
+    ig = UnipartiteGraph{Int}()
+    add_edge!(ig, 1, 2)
+    @test edge_weight(freeze(ig), 1, 2) === 1
+
+    mktempdir() do root
+        plain = joinpath(root, "plain.csv")
+        write(plain, "u,v\n1,2\n2,1\n2,3\n")
+        pg, rows = load_unipartite_graph(plain)
+        @test rows == 3 && num_edges(pg) == 2
+        @test edge_weight(pg, 1, 2) == 2.0     # duplicate merged with +
+
+        weighted = joinpath(root, "weighted.csv")
+        write(weighted, "u,v,w\n1,2,0.5\n2,1,4\n3,3,1\n")
+        wg, _ = load_unipartite_graph(weighted; combine=max)
+        @test edge_weight(wg, 1, 2) == 4.0 && has_edge(wg, 3, 3)
+        lg, _ = load_unipartite_graph(weighted; weight_col=nothing, default_weight=7)
+        @test edge_weight(lg, 1, 2) == 14.0
+    end
+end
+
 @testset "dataset paths" begin
     @test split_provider_dataset("amazon/boxes") == ("amazon", "boxes")
     @test split_provider_dataset("twitter") == ("twitter", "twitter")
@@ -96,6 +158,66 @@ end
     @test dataset_key_ignored("raw/x", ["raw/"])
     @test !dataset_key_ignored("amazon/boxes", ["amazon/music"])
     @test resolve_graph_path("konect/x"; data_root="d") == joinpath("d", "konect", "x", "indexed_interactions.csv")
+end
+
+@testset "catalogs" begin
+    @test catalog_names() == ["amazon", "konect"]
+
+    konect = catalog("konect")
+    @test length(konect.entries) == 1326
+    @test allunique(entry.id for entry in konect.entries)
+    @test konect.entries[1].id == "brunson_south-africa"
+    @test konect.entries[end].id == "dimacs10-uk-2007-05"
+
+    za = catalog_entry("konect", "ucidata-zachary")
+    @test za.name == "Zachary karate club"
+    @test za.attributes["code"] == "ZA"
+    @test za.attributes["category"] == "Human social network"
+    @test za.attributes["structure"] == "Unipartite, undirected"
+    @test za.n == 34 && za.m == 78
+    @test za.available
+    @test za.metrics["fill"] ≈ 0.139037
+    @test za.metrics["density"] ≈ 0.139037
+    @test za.metrics["average_degree"] ≈ 4.58824
+    @test za.metrics["clustering_coefficient"] ≈ 0.255682
+    @test za.metrics["degree_assortativity"] ≈ -0.475613
+    @test za.metrics["degree_assortativity_p_value"] ≈ 3.50945e-10
+    @test za.metrics["diameter"] == 5
+    @test catalog_dataset_key(za) == "konect/ucidata-zachary"
+    @test za.url == "http://konect.cc/networks/ucidata-zachary/"
+    @test any(item.key == "fill" && item.name == "Fill (density)" for item in konect.legend)
+
+    sa = catalog_entry(konect, "brunson_south-africa")
+    @test sa.attributes["structure"] == "Bipartite, undirected"
+    @test sa.n == 11 && sa.m == 13
+    @test sa.metrics["n_left"] == 6
+    @test sa.metrics["n_right"] == 5
+    @test sa.metrics["fill"] ≈ 0.433333
+
+    amazon = catalog("amazon")
+    @test length(amazon.entries) == 34
+    @test allunique(entry.id for entry in amazon.entries)
+    beauty = catalog_entry("amazon", "All_Beauty")
+    @test beauty.name == "All Beauty"
+    @test beauty.attributes["structure"] == "Bipartite, undirected"
+    @test beauty.metrics["n_users"] == 632_000
+    @test beauty.metrics["n_items"] == 112_600
+    @test beauty.n == 632_000 + 112_600
+    @test beauty.m == 701_500
+    @test beauty.metrics["density"] ≈ 701_500 / (632_000 * 112_600)
+    @test occursin("All_Beauty.jsonl.gz", beauty.url)
+    @test occursin("meta_All_Beauty.jsonl.gz", beauty.attributes["meta_url"])
+
+    boxes = catalog_entry(amazon, "Subscription_Boxes")
+    @test boxes.metrics["n_users"] == 15_200
+    @test boxes.metrics["n_items"] == 641
+    @test boxes.m == 16_200
+    @test boxes.n == 15_200 + 641
+    @test catalog_dataset_key(boxes) == "amazon/Subscription_Boxes"
+    @test any(item.key == "density" for item in amazon.legend)
+
+    @test_throws ArgumentError catalog("no-such-catalog")
+    @test_throws ArgumentError catalog_entry("konect", "not-a-network")
 end
 
 @testset "provider pipeline (offline)" begin

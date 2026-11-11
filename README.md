@@ -5,7 +5,10 @@ Shared bipartite-graph toolkit, extracted from `aco-mkdb`:
 - **Graph structures** (`src/graph.jl`): mutable `BipartiteGraph` → `freeze` → CSR-backed
   `FrozenBipartite`, `SubGraph` point/batch queries, and the `Subgraph` submodule
   (`add_node!`, `edge_count`, `missing_edges`, …).
-- **I/O** (`src/io.jl`): `load_bipartite_graph` for indexed `u,v` CSVs.
+- **Weighted unipartite graphs** (`src/unipartite.jl`): undirected, edge-weighted
+  `UnipartiteGraph{W}` → `freeze` → CSR-backed `FrozenUnipartite{W}`.
+- **I/O** (`src/io.jl`): `load_bipartite_graph` for indexed `u,v` CSVs,
+  `load_unipartite_graph` for `u,v[,w]` CSVs.
 - **Dataset layout** (`src/paths.jl`): `data/<provider>/<dataset>/`, discovery,
   `.dataignore`, ordering by edge count.
 - **Download pipeline** (`src/providers/`, `src/index.jl`): provider adapters for
@@ -48,6 +51,53 @@ fg = freeze(g)                                     # read-only CSR graph
 order_graphs_by_edges(; prefix="konect-small")     # discover local datasets
 process_with_provider("konect", "bitcoin"; download=true)
 ```
+
+## Catalogs
+
+Built-in dataset lists live in `src/catalogs/<provider>.json` and load through
+one API. Adding a catalog is adding a JSON file there; the filename is the
+name passed to `catalog`. Each entry has `n` nodes, `m` edges, string
+`attributes`, and a `metrics` dict. A missing metric was not published for
+that dataset.
+
+```julia
+catalog_names()                                  # ["amazon", "konect"]
+za = catalog_entry("konect", "ucidata-zachary")  # id is the URL slug
+za.n, za.m                                       # 34 nodes, 78 edges
+za.metrics["fill"]                               # density
+za.attributes["structure"]
+
+boxes = catalog_entry("amazon", "Subscription_Boxes")
+boxes.metrics["n_users"], boxes.metrics["density"]
+
+fg = load_dataset(catalog_dataset_key(za))
+```
+
+KONECT has 1,326 networks, with the statistics from konect.cc (`fill` is the
+density). Amazon Reviews 2023 has 34 categories. Those counts are the rounded
+K/M/B figures from the site: `n` is users plus items, `m` is ratings, and
+`metrics["density"]` is ratings / (users × items).
+
+## Weighted unipartite graphs
+
+```julia
+g = UnipartiteGraph()                 # Float64 weights; UnipartiteGraph{Int}() etc.
+add_edge!(g, 1, 2, 0.5)               # undirected; re-adding replaces the weight
+add_weight!(g, 1, 2, 1.0)             # accumulate → 1.5
+add_edge!(g, 2, 3)                    # default weight 1
+edge_weight(g, 2, 1), weighted_degree(g, 2), num_edges(g)
+
+fg = freeze(g)                        # read-only symmetric CSR
+neighbors(fg, 2)                      # sorted neighbor ids
+edge_weight(fg, 1, 3; default=0.0)    # binary search
+induced_weight(fg, [1, 2, 3])         # weight inside a vertex set
+
+# Same id space for u and v, so load the raw (non-indexed) interactions.csv.
+# Duplicate rows merge with `combine` (default +, i.e. multiplicity weights).
+g, rows = load_unipartite_graph("data/konect-small/euroroad/interactions.csv")
+```
+
+Self-loops are stored once, count 1 toward `degree`, and add their weight once.
 
 ## CLIs
 

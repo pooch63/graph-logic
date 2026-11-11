@@ -1,0 +1,866 @@
+{
+ "provider": "amazon",
+ "source": "https://amazon-reviews-2023.github.io/",
+ "retrieved": "2026-11-10",
+ "note": "User-item review graphs from Amazon Reviews 2023, one entry per category. n is users plus items and m is the number of ratings. Counts are the rounded K/M/B figures published on the page, not exact integers. density is ratings / (users * items). average_degree is 2m/n; average_degree_users and average_degree_items are m/n_users and m/n_items.",
+ "legend": [
+  {
+   "key": "n_users",
+   "symbol": "n_u",
+   "name": "Users"
+  },
+  {
+   "key": "n_items",
+   "symbol": "n_i",
+   "name": "Items"
+  },
+  {
+   "key": "review_tokens",
+   "symbol": "R",
+   "name": "Review tokens"
+  },
+  {
+   "key": "meta_tokens",
+   "symbol": "M",
+   "name": "Item-metadata tokens"
+  },
+  {
+   "key": "density",
+   "symbol": "p",
+   "name": "Density"
+  },
+  {
+   "key": "average_degree",
+   "symbol": "d",
+   "name": "Average degree"
+  },
+  {
+   "key": "average_degree_users",
+   "symbol": "d_u",
+   "name": "Average user degree"
+  },
+  {
+   "key": "average_degree_items",
+   "symbol": "d_i",
+   "name": "Average item degree"
+  }
+ ],
+ "entries": [
+  {
+   "id": "All_Beauty",
+   "name": "All Beauty",
+   "n": 744600,
+   "m": 701500,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/All_Beauty.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_All_Beauty.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 632000,
+    "n_items": 112600,
+    "review_tokens": 31600000,
+    "meta_tokens": 74100000,
+    "density": 9.857623041122377e-06,
+    "average_degree": 1.8842331453129197,
+    "average_degree_users": 1.1099683544303798,
+    "average_degree_items": 6.230017761989343
+   }
+  },
+  {
+   "id": "Amazon_Fashion",
+   "name": "Amazon Fashion",
+   "n": 2825900,
+   "m": 2500000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Amazon_Fashion.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Amazon_Fashion.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 2000000,
+    "n_items": 825900,
+    "review_tokens": 94900000,
+    "meta_tokens": 510500000,
+    "density": 1.5135004237801186e-06,
+    "average_degree": 1.76934781839414,
+    "average_degree_users": 1.25,
+    "average_degree_items": 3.0270008475602372
+   }
+  },
+  {
+   "id": "Appliances",
+   "name": "Appliances",
+   "n": 1894300,
+   "m": 2100000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Appliances.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Appliances.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 1800000,
+    "n_items": 94300,
+    "review_tokens": 92800000,
+    "meta_tokens": 95300000,
+    "density": 1.2371862849063274e-05,
+    "average_degree": 2.217177849337486,
+    "average_degree_users": 1.1666666666666667,
+    "average_degree_items": 22.26935312831389
+   }
+  },
+  {
+   "id": "Arts_Crafts_and_Sewing",
+   "name": "Arts Crafts and Sewing",
+   "n": 5401300,
+   "m": 9000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Arts_Crafts_and_Sewing.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Arts_Crafts_and_Sewing.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 4600000,
+    "n_items": 801300,
+    "review_tokens": 350000000,
+    "meta_tokens": 695400000,
+    "density": 2.4416844367034004e-06,
+    "average_degree": 3.3325310573380484,
+    "average_degree_users": 1.9565217391304348,
+    "average_degree_items": 11.231748408835642
+   }
+  },
+  {
+   "id": "Automotive",
+   "name": "Automotive",
+   "n": 10000000,
+   "m": 20000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Automotive.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Automotive.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 8000000,
+    "n_items": 2000000,
+    "review_tokens": 824900000,
+    "meta_tokens": 1700000000,
+    "density": 1.25e-06,
+    "average_degree": 4.0,
+    "average_degree_users": 2.5,
+    "average_degree_items": 10.0
+   }
+  },
+  {
+   "id": "Baby_Products",
+   "name": "Baby Products",
+   "n": 3617700,
+   "m": 6000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Baby_Products.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Baby_Products.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 3400000,
+    "n_items": 217700,
+    "review_tokens": 323300000,
+    "meta_tokens": 218600000,
+    "density": 8.106136345213326e-06,
+    "average_degree": 3.3170246289078698,
+    "average_degree_users": 1.7647058823529411,
+    "average_degree_items": 27.56086357372531
+   }
+  },
+  {
+   "id": "Beauty_and_Personal_Care",
+   "name": "Beauty and Personal Care",
+   "n": 12300000,
+   "m": 23900000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Beauty_and_Personal_Care.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Beauty_and_Personal_Care.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 11300000,
+    "n_items": 1000000,
+    "review_tokens": 1100000000,
+    "meta_tokens": 913700000,
+    "density": 2.115044247787611e-06,
+    "average_degree": 3.886178861788618,
+    "average_degree_users": 2.1150442477876106,
+    "average_degree_items": 23.9
+   }
+  },
+  {
+   "id": "Books",
+   "name": "Books",
+   "n": 14700000,
+   "m": 29500000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Books.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Books.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 10300000,
+    "n_items": 4400000,
+    "review_tokens": 2900000000,
+    "meta_tokens": 3700000000,
+    "density": 6.509267431597529e-07,
+    "average_degree": 4.01360544217687,
+    "average_degree_users": 2.8640776699029127,
+    "average_degree_items": 6.704545454545454
+   }
+  },
+  {
+   "id": "CDs_and_Vinyl",
+   "name": "CDs and Vinyl",
+   "n": 2501700,
+   "m": 4800000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/CDs_and_Vinyl.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_CDs_and_Vinyl.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 1800000,
+    "n_items": 701700,
+    "review_tokens": 514800000,
+    "meta_tokens": 287500000,
+    "density": 3.800294522825519e-06,
+    "average_degree": 3.8373905744094015,
+    "average_degree_users": 2.6666666666666665,
+    "average_degree_items": 6.840530141085934
+   }
+  },
+  {
+   "id": "Cell_Phones_and_Accessories",
+   "name": "Cell Phones and Accessories",
+   "n": 12900000,
+   "m": 20800000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Cell_Phones_and_Accessories.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Cell_Phones_and_Accessories.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 11600000,
+    "n_items": 1300000,
+    "review_tokens": 935400000,
+    "meta_tokens": 1300000000,
+    "density": 1.3793103448275862e-06,
+    "average_degree": 3.2248062015503876,
+    "average_degree_users": 1.793103448275862,
+    "average_degree_items": 16.0
+   }
+  },
+  {
+   "id": "Clothing_Shoes_and_Jewelry",
+   "name": "Clothing Shoes and Jewelry",
+   "n": 29800000,
+   "m": 66000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Clothing_Shoes_and_Jewelry.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Clothing_Shoes_and_Jewelry.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 22600000,
+    "n_items": 7200000,
+    "review_tokens": 2600000000,
+    "meta_tokens": 5900000000,
+    "density": 4.056047197640118e-07,
+    "average_degree": 4.429530201342282,
+    "average_degree_users": 2.920353982300885,
+    "average_degree_items": 9.166666666666666
+   }
+  },
+  {
+   "id": "Digital_Music",
+   "name": "Digital Music",
+   "n": 171500,
+   "m": 130400,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Digital_Music.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Digital_Music.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 101000,
+    "n_items": 70500,
+    "review_tokens": 11400000,
+    "meta_tokens": 22300000,
+    "density": 1.8313320693771505e-05,
+    "average_degree": 1.5206997084548104,
+    "average_degree_users": 1.2910891089108911,
+    "average_degree_items": 1.849645390070922
+   }
+  },
+  {
+   "id": "Electronics",
+   "name": "Electronics",
+   "n": 19900000,
+   "m": 43900000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Electronics.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Electronics.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 18300000,
+    "n_items": 1600000,
+    "review_tokens": 2700000000,
+    "meta_tokens": 1700000000,
+    "density": 1.4993169398907103e-06,
+    "average_degree": 4.4120603015075375,
+    "average_degree_users": 2.398907103825137,
+    "average_degree_items": 27.4375
+   }
+  },
+  {
+   "id": "Gift_Cards",
+   "name": "Gift Cards",
+   "n": 133800,
+   "m": 152400,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Gift_Cards.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Gift_Cards.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 132700,
+    "n_items": 1100,
+    "review_tokens": 3600000,
+    "meta_tokens": 630000,
+    "density": 0.001044050147290539,
+    "average_degree": 2.2780269058295963,
+    "average_degree_users": 1.148455162019593,
+    "average_degree_items": 138.54545454545453
+   }
+  },
+  {
+   "id": "Grocery_and_Gourmet_Food",
+   "name": "Grocery and Gourmet Food",
+   "n": 7603200,
+   "m": 14300000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Grocery_and_Gourmet_Food.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Grocery_and_Gourmet_Food.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 7000000,
+    "n_items": 603200,
+    "review_tokens": 579500000,
+    "meta_tokens": 462800000,
+    "density": 3.3866995073891626e-06,
+    "average_degree": 3.761574074074074,
+    "average_degree_users": 2.0428571428571427,
+    "average_degree_items": 23.70689655172414
+   }
+  },
+  {
+   "id": "Handmade_Products",
+   "name": "Handmade Products",
+   "n": 751300,
+   "m": 664200,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Handmade_Products.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Handmade_Products.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 586600,
+    "n_items": 164700,
+    "review_tokens": 23300000,
+    "meta_tokens": 125800000,
+    "density": 6.8748497873268015e-06,
+    "average_degree": 1.7681352322640755,
+    "average_degree_users": 1.1322877599727241,
+    "average_degree_items": 4.032786885245901
+   }
+  },
+  {
+   "id": "Health_and_Household",
+   "name": "Health and Household",
+   "n": 13297400,
+   "m": 25600000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Health_and_Household.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Health_and_Household.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 12500000,
+    "n_items": 797400,
+    "review_tokens": 1200000000,
+    "meta_tokens": 787200000,
+    "density": 2.5683471281665414e-06,
+    "average_degree": 3.8503767653827063,
+    "average_degree_users": 2.048,
+    "average_degree_items": 32.10433910208177
+   }
+  },
+  {
+   "id": "Health_and_Personal_Care",
+   "name": "Health and Personal Care",
+   "n": 522000,
+   "m": 494100,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Health_and_Personal_Care.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Health_and_Personal_Care.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 461700,
+    "n_items": 60300,
+    "review_tokens": 23900000,
+    "meta_tokens": 40300000,
+    "density": 1.7747519711384596e-05,
+    "average_degree": 1.893103448275862,
+    "average_degree_users": 1.0701754385964912,
+    "average_degree_items": 8.194029850746269
+   }
+  },
+  {
+   "id": "Home_and_Kitchen",
+   "name": "Home and Kitchen",
+   "n": 26900000,
+   "m": 67400000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Home_and_Kitchen.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Home_and_Kitchen.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 23200000,
+    "n_items": 3700000,
+    "review_tokens": 3100000000,
+    "meta_tokens": 3800000000,
+    "density": 7.851817334575955e-07,
+    "average_degree": 5.011152416356877,
+    "average_degree_users": 2.9051724137931036,
+    "average_degree_items": 18.216216216216218
+   }
+  },
+  {
+   "id": "Industrial_and_Scientific",
+   "name": "Industrial and Scientific",
+   "n": 3827500,
+   "m": 5200000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Industrial_and_Scientific.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Industrial_and_Scientific.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 3400000,
+    "n_items": 427500,
+    "review_tokens": 235200000,
+    "meta_tokens": 363100000,
+    "density": 3.5775713794289645e-06,
+    "average_degree": 2.7171783148269104,
+    "average_degree_users": 1.5294117647058822,
+    "average_degree_items": 12.163742690058479
+   }
+  },
+  {
+   "id": "Kindle_Store",
+   "name": "Kindle Store",
+   "n": 7200000,
+   "m": 25600000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Kindle_Store.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Kindle_Store.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 5600000,
+    "n_items": 1600000,
+    "review_tokens": 2200000000,
+    "meta_tokens": 1700000000,
+    "density": 2.8571428571428573e-06,
+    "average_degree": 7.111111111111111,
+    "average_degree_users": 4.571428571428571,
+    "average_degree_items": 16.0
+   }
+  },
+  {
+   "id": "Magazine_Subscriptions",
+   "name": "Magazine Subscriptions",
+   "n": 63500,
+   "m": 71500,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Magazine_Subscriptions.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Magazine_Subscriptions.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 60100,
+    "n_items": 3400,
+    "review_tokens": 3800000,
+    "meta_tokens": 1300000,
+    "density": 0.00034990701771557206,
+    "average_degree": 2.251968503937008,
+    "average_degree_users": 1.1896838602329451,
+    "average_degree_items": 21.029411764705884
+   }
+  },
+  {
+   "id": "Movies_and_TV",
+   "name": "Movies and TV",
+   "n": 7247800,
+   "m": 17300000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Movies_and_TV.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Movies_and_TV.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 6500000,
+    "n_items": 747800,
+    "review_tokens": 1000000000,
+    "meta_tokens": 415500000,
+    "density": 3.5591581459460573e-06,
+    "average_degree": 4.773862413422004,
+    "average_degree_users": 2.6615384615384614,
+    "average_degree_items": 23.13452794864937
+   }
+  },
+  {
+   "id": "Musical_Instruments",
+   "name": "Musical Instruments",
+   "n": 2013600,
+   "m": 3000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Musical_Instruments.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Musical_Instruments.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 1800000,
+    "n_items": 213600,
+    "review_tokens": 182200000,
+    "meta_tokens": 200100000,
+    "density": 7.80274656679151e-06,
+    "average_degree": 2.9797377830750893,
+    "average_degree_users": 1.6666666666666667,
+    "average_degree_items": 14.044943820224718
+   }
+  },
+  {
+   "id": "Office_Products",
+   "name": "Office Products",
+   "n": 8310400,
+   "m": 12800000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Office_Products.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Office_Products.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 7600000,
+    "n_items": 710400,
+    "review_tokens": 574700000,
+    "meta_tokens": 682800000,
+    "density": 2.370791844476055e-06,
+    "average_degree": 3.0804774740084713,
+    "average_degree_users": 1.6842105263157894,
+    "average_degree_items": 18.01801801801802
+   }
+  },
+  {
+   "id": "Patio_Lawn_and_Garden",
+   "name": "Patio Lawn and Garden",
+   "n": 9451700,
+   "m": 16500000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Patio_Lawn_and_Garden.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Patio_Lawn_and_Garden.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 8600000,
+    "n_items": 851700,
+    "review_tokens": 781300000,
+    "meta_tokens": 875100000,
+    "density": 2.2526765893657282e-06,
+    "average_degree": 3.491435403154988,
+    "average_degree_users": 1.9186046511627908,
+    "average_degree_items": 19.373018668545264
+   }
+  },
+  {
+   "id": "Pet_Supplies",
+   "name": "Pet Supplies",
+   "n": 8292700,
+   "m": 16800000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Pet_Supplies.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Pet_Supplies.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 7800000,
+    "n_items": 492700,
+    "review_tokens": 905900000,
+    "meta_tokens": 511000000,
+    "density": 4.371516447830635e-06,
+    "average_degree": 4.051756364031015,
+    "average_degree_users": 2.1538461538461537,
+    "average_degree_items": 34.097828293078955
+   }
+  },
+  {
+   "id": "Software",
+   "name": "Software",
+   "n": 2689200,
+   "m": 4900000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Software.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Software.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 2600000,
+    "n_items": 89200,
+    "review_tokens": 179400000,
+    "meta_tokens": 67100000,
+    "density": 2.1127975163849603e-05,
+    "average_degree": 3.6442064554514353,
+    "average_degree_users": 1.8846153846153846,
+    "average_degree_items": 54.93273542600897
+   }
+  },
+  {
+   "id": "Sports_and_Outdoors",
+   "name": "Sports and Outdoors",
+   "n": 11900000,
+   "m": 19600000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Sports_and_Outdoors.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Sports_and_Outdoors.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 10300000,
+    "n_items": 1600000,
+    "review_tokens": 986200000,
+    "meta_tokens": 1300000000,
+    "density": 1.1893203883495146e-06,
+    "average_degree": 3.2941176470588234,
+    "average_degree_users": 1.9029126213592233,
+    "average_degree_items": 12.25
+   }
+  },
+  {
+   "id": "Subscription_Boxes",
+   "name": "Subscription Boxes",
+   "n": 15841,
+   "m": 16200,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Subscription_Boxes.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Subscription_Boxes.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 15200,
+    "n_items": 641,
+    "review_tokens": 1000000,
+    "meta_tokens": 447000,
+    "density": 0.0016626980868708432,
+    "average_degree": 2.0453254213749132,
+    "average_degree_users": 1.0657894736842106,
+    "average_degree_items": 25.273010920436818
+   }
+  },
+  {
+   "id": "Tools_and_Home_Improvement",
+   "name": "Tools and Home Improvement",
+   "n": 13700000,
+   "m": 27000000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Tools_and_Home_Improvement.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Tools_and_Home_Improvement.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 12200000,
+    "n_items": 1500000,
+    "review_tokens": 1300000000,
+    "meta_tokens": 1500000000,
+    "density": 1.4754098360655737e-06,
+    "average_degree": 3.9416058394160585,
+    "average_degree_users": 2.2131147540983607,
+    "average_degree_items": 18.0
+   }
+  },
+  {
+   "id": "Toys_and_Games",
+   "name": "Toys and Games",
+   "n": 8990700,
+   "m": 16300000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Toys_and_Games.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Toys_and_Games.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 8100000,
+    "n_items": 890700,
+    "review_tokens": 707900000,
+    "meta_tokens": 848300000,
+    "density": 2.2592855944901155e-06,
+    "average_degree": 3.625969056914367,
+    "average_degree_users": 2.0123456790123457,
+    "average_degree_items": 18.300213315369934
+   }
+  },
+  {
+   "id": "Video_Games",
+   "name": "Video Games",
+   "n": 2937200,
+   "m": 4600000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Video_Games.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Video_Games.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 2800000,
+    "n_items": 137200,
+    "review_tokens": 347900000,
+    "meta_tokens": 137300000,
+    "density": 1.197417742607247e-05,
+    "average_degree": 3.132234781424486,
+    "average_degree_users": 1.6428571428571428,
+    "average_degree_items": 33.52769679300292
+   }
+  },
+  {
+   "id": "Unknown",
+   "name": "Unknown",
+   "n": 36300000,
+   "m": 63800000,
+   "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Unknown.jsonl.gz",
+   "available": true,
+   "attributes": {
+    "structure": "Bipartite, undirected",
+    "edge_type": "Ratings",
+    "meta_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Unknown.jsonl.gz"
+   },
+   "tags": [],
+   "metrics": {
+    "n_users": 23100000,
+    "n_items": 13200000,
+    "review_tokens": 3300000000,
+    "meta_tokens": 232800000,
+    "density": 2.0923520923520924e-07,
+    "average_degree": 3.515151515151515,
+    "average_degree_users": 2.761904761904762,
+    "average_degree_items": 4.833333333333333
+   }
+  }
+ ]
+}
